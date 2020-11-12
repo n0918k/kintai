@@ -1,0 +1,7 @@
+<% if corporate_signed_in?%> 
+  <%= current_corporate.name %>
+  <%= link_to "ログアウト",destroy_corporate_session_path,method: :delete%>
+<% else %>
+  <%= link_to "会社登録",new_corporate_registration_path%>
+  <%= link_to "ログイン",new_corporate_session_path%>
+<% end %>
